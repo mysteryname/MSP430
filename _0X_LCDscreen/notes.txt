@@ -1,0 +1,9 @@
+LCD pin - launchpad pin
+pin1 vcc 
+pin2 gnd -p1.0
+pin3 sce -p1.1
+pin4 rst -p1.2
+pin5 d/c -p1.3
+pin6 dnk / mosi - p1.4
+pin7 sclk - p1.5
+pin8 led  
