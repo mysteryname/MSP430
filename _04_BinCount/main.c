@@ -21,14 +21,11 @@ int main(void) {
 		if( (PIN3 & P1IN) == 0){
 			// add debounce somewhere 
 			i+=1; // should this be i=i+1 for clarity ?
-			PIN1 =0;			
-			PIN2 =0;
-			PIN4 =0;
-			PIN5 =0;
-			if (0x01 & i ==1) PIN1 =1;			
-			if (0x02 & i ==1) PIN2 =1;
-			if (0x04 & i ==1) PIN4 =1;
-			if (0x08 & i ==1) PIN5 =1;
+			P1OUT=0;
+			if (0x01 & i ==1) P1OUT^=PIN1;			
+			if (0x02 & i ==1) P1OUT^=PIN2;
+			if (0x04 & i ==1) P1OUT^=PIN4;
+			if (0x08 & i ==1) P1OUT^=PIN5;
 			__delay_cycles(16000); // This is used as a "Debounce" Otherwise the LED will flash too fast.
 		}
 	}
