@@ -9,7 +9,8 @@
 int main(void) {
 	WDTCTL = WDTPW | WDTHOLD;		// Stop the watch dog timer.
 	P1DIR = (PIN6 + PIN0);			// Set the Direction of the Port, PIN6 and 0 are outputs and the rest are inputs.
-	P1OUT = (PIN6);					// Turn the Green LED on.
+        P1REN = (PIN3);                         //Activate the resistor in the MSP40
+	P1OUT = (PIN6 + PIN3);		        // Turn the Green LED on and set the Pin3 to be a pull up resistor
 
 	while(1){
 	// Check if the Input has changed on PIN3.
