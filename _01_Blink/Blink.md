@@ -5,7 +5,7 @@ Blink is the "Hello World" for hardware. In this experiment we are going to look
 
 lets say in the below example PORT is equal to 0001 as a 4 bit number.
 
-
+```
 example 1: NOT
 PORT = ~PORT
      = 1110
@@ -17,7 +17,7 @@ PORT = PORT + 1000
 example 3: Bitwise OR
 PORT = PORT | 1100
      = 1101
-
+```
 	 
 There are many more examples "here":http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B#Compound_assignment_operators
 
@@ -60,6 +60,11 @@ Once That is Complete Challenge Yourself
 
 
 Make the two LED's alternate in their blinking.
+
 eg That is, red, green, red, green, etc... 
+
+
 Make one LED stay on for longer than the other.
+
 eg Red for 1 second, Green for 0.5 second.
+
