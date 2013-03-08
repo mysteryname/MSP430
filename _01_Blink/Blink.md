@@ -19,7 +19,7 @@ PORT = PORT | 1100
      = 1101
 ```
 	 
-There are many more examples "here":http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B#Compound_assignment_operators
+There are many more examples [here](http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B#Compound_assignment_operators)
 
 Starting off code
 ==
