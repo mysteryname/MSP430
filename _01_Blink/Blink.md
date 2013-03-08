@@ -5,6 +5,7 @@ Blink is the "Hello World" for hardware. In this experiment we are going to look
 
 lets say in the below example PORT is equal to 0001 as a 4 bit number.
 
+
 example 1: NOT
 PORT = ~PORT
      = 1110
@@ -22,6 +23,7 @@ There are many more examples "here":http://en.wikipedia.org/wiki/Operators_in_C_
 
 Starting off code
 ==
+=
 ``` C
 /*  Blink LED example */
 
@@ -56,7 +58,8 @@ int main(void) {
 Once That is Complete Challenge Yourself
 ===
 
-# Make the two LED's alternate in their blinking.
-** That is, red, green, red, green, etc... 
-# Make one LED stay on for longer than the other.
-** Red for 1 second, Green for 0.5 second.
+
+Make the two LED's alternate in their blinking.
+eg That is, red, green, red, green, etc... 
+Make one LED stay on for longer than the other.
+eg Red for 1 second, Green for 0.5 second.
