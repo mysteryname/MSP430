@@ -15,10 +15,10 @@
 void Binary(int i){
 	P1OUT &= ~(BIT4 + BIT5);
 	P2OUT &= ~(BIT0 + BIT1);
-	if ( 0x01 & i ) P1OUT |= BIT4;
-	if ( 0x02 & i ) P1OUT |= BIT5;
-	if ( 0x04 & i )	P2OUT |= BIT0;
-	if ( 0x08 & i )	P2OUT |= BIT1;
+	if ( 1 == i ) P1OUT |= BIT4;
+	if ( 2 == i ) P1OUT |= BIT5;
+	if ( 3 == i ) P2OUT |= BIT0;
+	if ( 4 == i ) P2OUT |= BIT1;
 }
 
 
@@ -31,9 +31,14 @@ int main(void) {
 	while(1){
 	// Check if the Input has changed on BIT3.
 	// If it has, Toggle the red LED.
-		delay(200);
-		Binary(k++);
-		if (k > 16) k=0;
+		for (k=1; k<5;k++){
+			delay(100);
+			Binary(k);
+		}
+		for (k=3; k>1;k--){
+			delay(100);
+			Binary(k);
+		}
 	}
 }
 
