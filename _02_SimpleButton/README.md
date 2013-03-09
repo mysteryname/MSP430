@@ -13,7 +13,7 @@ Things that you'll need to know are listed in the following:
 * [Pull Up Resistors.](http://en.wikipedia.org/wiki/Pull-up_resistor)
 * [Breadboard](http://en.wikipedia.org/wiki/Breadboard)
 * [Contact Bounce](http://en.wikipedia.org/wiki/Switch#Contact_bounce)
-* [Understanding I/O on a micro Controller] http://www.coactionos.com/embedded-design/98-gpio-output-pin-modes.html
+* [Understanding I/O on a micro Controller](http://www.coactionos.com/embedded-design/98-gpio-output-pin-modes.html)
 
 In this experiment we want a tactile switch to toggle an LED, This can be done by polling the input pin on the micro controller and waiting for a change. This is generally considered back practise in the industry as this process consumes a lot of CPU cycle just watching for a change in state. This will be addressed later in experiments. Once the switch has been pressed, the MSP430 can then change the state of the LED. 
 
@@ -21,7 +21,7 @@ To check if there is a change in the state of a pin, in the code you need to rea
 ```C
 Temp = P1IN;
 ```
-Where Temp is a previously defined variable and P1IN is PORT 1's input register. When reading the state of a Port it will take a “snapshot” of the states of all the bits on the port and save them into the variable Temp. At this stage you can do what you need to get the data. 
+Where Temp is a previously defined variable and P1IN is PORT 1's input register. When reading the state of a Port it will take a ï¿½snapshotï¿½ of the states of all the bits on the port and save them into the variable Temp. At this stage you can do what you need to get the data. 
 
 Starting Code
 ```C
