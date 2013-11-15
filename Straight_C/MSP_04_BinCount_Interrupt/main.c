@@ -10,7 +10,7 @@
 
 #include <msp430g2553.h>
 
-#include "main.h"
+#include "delay.h"
 
 
 void Binary(int i){
