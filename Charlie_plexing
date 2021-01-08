@@ -1,0 +1,84 @@
+#include <msp430.h>
+
+int main(void)
+{
+    WDTCTL = WDTPW | WDTHOLD;   // Stop watchdog timer
+    while(1){
+
+        charlie1();                 //led1
+        __delay_cycles(100000);
+
+        charlie2();//led 2
+        __delay_cycles(100000);
+
+        charlie5();//led 3
+        __delay_cycles(100000);
+
+        charlie3();//led 4
+         __delay_cycles(100000);
+
+         charlie4();//led 5
+         __delay_cycles(100000);
+
+        charlie6();//led 6
+        __delay_cycles(100000);
+//
+
+//
+
+//
+//
+
+
+
+    }
+    return 0;
+}
+void charlie1()
+{
+    P1DIR |= BIT0;
+    P1DIR |= BIT1;
+    P1OUT |= BIT1;
+    P1OUT &= ~BIT0;
+    P1DIR &= ~ BIT2;
+}
+void charlie2()
+{
+    P1DIR |= BIT0;
+    P1DIR |= BIT1;
+    P1OUT |= BIT0;
+    P1OUT &= ~BIT1;
+    P1DIR &= ~ BIT2;
+}
+void charlie3()
+{
+    P1DIR |= BIT2;
+    P1DIR |= BIT1;
+    P1OUT |= BIT2;
+    P1OUT &= ~BIT1;
+    P1DIR &= ~ BIT0;
+}
+void charlie4()
+{
+    P1DIR |= BIT2;
+    P1DIR |= BIT1;
+    P1OUT |= BIT1;
+    P1OUT &= ~BIT2;
+    P1DIR &= ~ BIT0;
+}
+void charlie5()
+{
+    P1DIR |= BIT0;
+    P1DIR |= BIT2;
+    P1OUT |= BIT0;
+    P1OUT &= ~BIT2;
+    P1DIR &= ~ BIT1;
+}
+void charlie6()
+{
+    P1DIR |= BIT0;
+    P1DIR |= BIT2;
+    P1OUT |= BIT2;
+    P1OUT &= ~BIT0;
+    P1DIR &= ~ BIT1;
+}
